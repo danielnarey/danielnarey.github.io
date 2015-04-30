@@ -51,6 +51,7 @@ body{
 
 #brand{
     font-family: 'Cabin Sketch', sans-serif;
+    font-weight: 400;
     font-size: 5em;
     padding-left: 0.25em;
 }
@@ -128,14 +129,6 @@ body{
     line-height: 2.25em;
 }
 
-
-.menu-items{
-  font-family: 'Cabin', sans-serif;
-  letter-spacing: normal;
-  font-size: 1em;
-  text-align: left;
-}
-
 .footer{
   background-color: black;
   font-family: 'Cabin', sans-serif;
@@ -152,13 +145,12 @@ h1{
 
 h2{
     font-size: 1.75em;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 0.05em;
     margin: inherit;
 }
 
 h2.section{
-    font-weight: 300;
     padding-bottom: 20px;
 }
 
@@ -177,20 +169,18 @@ h3.caption{
 
 h4{
     font-size: 1.25em;
+    font-weight: 300;
     letter-spacing: normal;
     margin: inherit;
     line-height: 1em;
 }
 
 p{
-    font-size: 22px;
+    font-size: 20px;
+    font-weight: 300;
     letter-spacing: normal;
     margin: inherit;
     padding-bottom: 20px;
-}
-
-p.light{
-    font-weight: 300;
 }
 
 img.center{

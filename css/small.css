@@ -1,0 +1,147 @@
+*{
+    -webkit-font-smoothing: antialiased;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #EBF2F7;
+    font-family: 'Josefin Slab', serif;
+    font-size: 16px;
+}
+
+h1{
+    font-family: 'Josefin Slab', serif;
+    font-weight: 400;
+    font-size: 4.5em;
+    line-height: 1em;
+    color: black;
+    text-align: center;
+    margin: 0;
+}
+
+p{
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: black;
+    text-align: center;
+}
+
+img, embed, object, video{
+    max-width: 100%;
+    margin: auto;
+}
+
+img.photo{
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    margin: auto;
+}
+
+.content{
+    max-width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title{
+    max-width: 95%;
+    margin: 5vw auto;
+    text-align: center;
+}
+
+.w17{
+    width: 16.67%;
+}
+
+.w25{
+    width: 25%;
+}
+
+.w33{
+    width: 33.33%;
+}
+
+.w50{
+    width: 50%;
+}
+
+.w58{
+    width: 58.33%;
+}
+
+.w66{
+    width: 66%;
+}
+
+.menu{
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.button {
+  display: block;
+  background: #535358;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: 'Josefin Slab', serif;
+  font-weight: 700;
+  color: #ffff6f;
+  font-size: 2em;
+  margin: 1em 0;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #3cb0fd;
+  color: yellow;
+  text-decoration: none;
+}
+
+#header{
+    margin: 5vw auto;
+}
+
+#large{
+    display: none;
+}
+
+
+@media screen and (min-width: 400px){
+    body{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 700px){
+    body{
+        font-size: 20px;
+    }
+
+    #header{
+        margin: 35px auto;
+    }
+
+    .title{
+        margin: 35px auto 35px auto;
+    }
+
+    .column {
+    	display: inline-block;
+        margin: auto 20px;
+    }
+
+    #large{
+        display: block;
+    }
+
+    #small{
+        display: none;
+    }
+}

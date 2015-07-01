@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #FAFFE0;
+    background-color: #FFFEE0;
     font-family: 'Josefin Slab', serif;
     font-size: 16px;
     min-height: 1000px;
@@ -190,7 +190,7 @@ img.highlight:hover{
 
 .button {
   display: block;
-  background: #535358;
+  background: #76767D;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px;

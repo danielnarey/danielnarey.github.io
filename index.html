@@ -16,17 +16,7 @@
 
       <div id="large-screen">
             <div class="header align-center"><a href=""><h1>Daniel C. Narey</h1></a></div>
-            <div class="content align-center menu" id="main-menu-lg">
-                <div class="centered-column align-center w50">
-                    <p class="button large" onclick="nextScreen('main-menu-lg','startup-lg')">Startup</p>
-                    <a href="http://danielnarey.com/blog/" class="button large">Blog</a>
-                </div>
-                <div class="centered-column align-center w50">
-                    <p class="button large" onclick="nextScreen('main-menu-lg','projects-lg')">Projects</p>
-                    <p class="button large" onclick="nextScreen('main-menu-lg','contact-lg')">Contact</p>
-                </div>
-            </div>
-            <div class="wide-content align-center menu" id="startup-lg">
+            <div class="wide-content align-center menu pad-bottom" id="startup-lg">
                 <div class="left-column align-right v-top w25">
                     <a href="http://visotype.com"><img class="medium" src="images/logo.png"></a>
                 </div>
@@ -34,7 +24,7 @@
                     <p class="sans strong p80 justified"><a class="highlight" href="http://visotype.com">Visotype LLC</a> aspires to make the tools and insights of data science more accessible to small organizations by providing data processing, analysis, and visualization services through a simple and user-friendly web interface. With up-front pricing, fast service, and satisfaction guaranteed, we can help you turn numbers into knowledge.</p>
                 </div>
             </div>
-            <div class="content align-center menu" id="projects-lg">
+            <div class="content align-center menu pad-bottom" id="projects-lg">
                 <div class="left-column align-right v-center w33">
                     <a href="http://makedataart.org"><img class="medium highlight" src="images/dataartlogo.png"></a>
                 </div>
@@ -42,7 +32,7 @@
                     <p class="sans">An interactive exhibit encouraging visitors to think about data in new ways as they create data-inspired art</p>
                 </div>
             </div>
-            <div class="narrow-content align-center pad-top" id="contact-lg">
+            <div class="narrow-content align-center pad-top pad-bottom" id="contact-lg">
                 <ul class="fa-ul" style="margin:0px">
                     <li><span style="font-size:1.4em"<i class="fa fa-envelope"></i>&nbsp</span>
                         <span style="unicode-bidi:bidi-override; direction:rtl;">
@@ -54,25 +44,27 @@
                     </li>
                 </ul>
             </div>
+            <div class="content align-center menu" id="main-menu-lg">
+                <div class="centered-column align-center w50">
+                    <p class="button large" onclick="menuSelect('startup-lg')">Startup</p>
+                    <a href="http://danielnarey.com/blog/" class="button large">Blog</a>
+                </div>
+                <div class="centered-column align-center w50">
+                    <p class="button large" onclick="menuSelect('projects-lg')">Projects</p>
+                    <p class="button large" onclick="menuSelect('contact-lg')">Contact</p>
+                </div>
+            </div>
       </div>
 
       <div id="small-screen">
           <div class="header align-center"><a href=""><h1>Daniel C.<br>Narey</h1></a></div>
-          <div id="main-menu-sm">
-              <div class="align-center">
-                  <p class="button large" onclick="nextScreen('main-menu-sm','startup-sm')">Startup</p>
-                  <p class="button large" onclick="nextScreen('main-menu-sm','projects-sm')">Projects</p>
-                  <a href="http://danielnarey.com/blog/" class="button large">Blog</a>
-                  <p class="button large" onclick="nextScreen('main-menu-sm','contact-sm')">Contact</p>
-              </div>
-          </div>
           <div class="content align-center pad10" id="startup-sm">
               <a href="http://visotype.com"><img class="medium align-center pad-left pad-top pad-bottom" src="images/logo.png"></a>
               <p class="sans strong p80"><a class="highlight" href="http://visotype.com">Visotype LLC</a> aspires<br>to make the tools and<br>insights of data science<br>more accessible to small<br>organizations by providing<br>data processing, analysis,<br>and visualization services<br>through a simple and user-<br>friendly web interface.</p>
               <p class="sans strong p80">With up-front pricing, fast<br>service, and satisfaction<br>guaranteed, we can help<br>you turn numbers into<br>knowledge.</p>
 
           </div>
-          <div class="narrow-content align-center menu" id="projects-sm">
+          <div class="narrow-content align-center menu pad-bottom" id="projects-sm">
               <div class="left-column align-right v-center w33 pad10">
                   <a href="http://makedataart.org"><img class="small highlight" src="images/dataartlogo.png"></a>
               </div>
@@ -80,7 +72,7 @@
                   <p class="sans strong p66">An interactive exhibit<br>encouraging visitors to<br>think about data in new<br>ways as they create<br>data-inspired art</p>
               </div>
           </div>
-          <div class="narrow-content align-center pad-top" id="contact-sm">
+          <div class="narrow-content align-center pad-top pad-bottom" id="contact-sm">
               <ul class="fa-ul" style="margin:0px">
                   <li><span style="font-size:1.4em"<i class="fa fa-envelope"></i>&nbsp</span>
                       <span style="unicode-bidi:bidi-override; direction:rtl;">
@@ -92,12 +84,25 @@
                   </li>
               </ul>
           </div>
+          <div id="main-menu-sm">
+              <div class="align-center">
+                  <p class="button large" onclick="menuSelect('startup-sm')">Startup</p>
+                  <p class="button large" onclick="menuSelect('projects-sm')">Projects</p>
+                  <a href="http://danielnarey.com/blog/" class="button large">Blog</a>
+                  <p class="button large" onclick="menuSelect('contact-sm')">Contact</p>
+              </div>
+          </div>
       </div>
 
       <script>
-        function nextScreen(current, next) {
-            document.getElementById(current).style.display = "none";
-            document.getElementById(next).style.display = "block";
+        function menuSelect(clicked) {
+            document.getElementById('startup-sm').style.display = "none";
+            document.getElementById('startup-lg').style.display = "none";
+            document.getElementById('projects-sm').style.display = "none";
+            document.getElementById('projects-lg').style.display = "none";
+            document.getElementById('contact-sm').style.display = "none";
+            document.getElementById('contact-lg').style.display = "none";
+            document.getElementById(clicked).style.display = "block";
         }
       </script>
 

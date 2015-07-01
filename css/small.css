@@ -6,9 +6,10 @@
 }
 
 body{
-    background-color: #EBF2F7;
+    background-color: #FAFFE0;
     font-family: 'Josefin Slab', serif;
     font-size: 16px;
+    min-height: 1000px;
 }
 
 h1{
@@ -17,8 +18,9 @@ h1{
     font-size: 4.5em;
     line-height: 1em;
     color: black;
-    text-align: center;
-    margin: 0;
+    text-align: inherit;
+    margin: unset;
+    padding: unset;
 }
 
 p{
@@ -26,61 +28,164 @@ p{
     font-size: 1.5em;
     font-weight: 300;
     color: black;
-    text-align: center;
+    text-align: inherit;
+    margin: inherit;
+    padding: inherit;
+}
+
+p.sans{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+p.strong{
+    font-weight: 400;
+}
+
+p.justified{
+    text-align: justify;
+}
+
+li{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    color: black;
+    font-size: 1.25em;
+    text-align: left;
+    line-height: 2.5em;
+    padding-left: 12.5%;
+}
+
+p.p80{
+    font-size: 1.25em;
+}
+
+p.p75{
+    font-size: 1.125em;
+}
+
+p.p66{
+    font-size: 1em;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+a.highlight{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 1.2em;
+    color: #00c4ff;
+}
+
+a.highlight:hover{
+    color: yellow;
 }
 
 img, embed, object, video{
-    max-width: 100%;
-    margin: auto;
-}
-
-img.photo{
     display: block;
     width: 100%;
+}
+
+img.highlight:hover{
+   border:5px solid yellow;
+   border-radius: 100vmin;
+}
+
+.small{
     max-width: 150px;
-    margin: auto;
 }
 
-.content{
-    max-width: 95%;
-    margin: 0 auto;
-    text-align: center;
+.medium{
+    max-width: 200px;
 }
 
-.title{
+.large{
+    max-width: 250px;
+}
+
+.content, .narrow-content, .wide-content{
     max-width: 95%;
+}
+
+.header{
     margin: 5vw auto;
+}
+
+.menu{
+    display: table;
+}
+
+.align-center{
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
 }
 
-.w17{
-    width: 16.67%;
+.align-left{
+    margin-left: 0;
+    margin-right: auto;
+    text-align: left;
+}
+
+.align-right{
+    margin-right: 0;
+    margin-left: auto;
+    text-align: right;
+}
+
+.v-center{
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+}
+
+.v-top{
+    margin-top: 0;
+    margin-bottom: auto;
+    vertical-align: top;
+}
+
+.v-bottom{
+    margin-bottom: 0;
+    margin-top: auto;
+    vertical-align: bottom;
+}
+
+.centered-column{
+    display: table-cell;
+    padding: 10px 20px 10px 20px;
+}
+
+.left-column{
+    display: table-cell;
+    padding: 10px 10px 10px 0;
+}
+
+.right-column{
+    display: table-cell;
+    padding: 10px 0 10px 10px;
 }
 
 .w25{
-    width: 25%;
+    width: 24%;
 }
 
 .w33{
-    width: 33.33%;
+    width: 33%;
 }
 
 .w50{
-    width: 50%;
-}
-
-.w58{
-    width: 58.33%;
+    width: 49%;
 }
 
 .w66{
     width: 66%;
 }
 
-.menu{
-    max-width: 250px;
-    margin: 0 auto;
-    text-align: center;
+.w75{
+    width: 74%;
 }
 
 .button {
@@ -93,55 +198,101 @@ img.photo{
   font-weight: 700;
   color: #ffff6f;
   font-size: 2em;
-  margin: 1em 0;
+  margin: 1em auto;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
 }
 
-.button:hover {
+.button:hover{
   background: #3cb0fd;
   color: yellow;
   text-decoration: none;
 }
 
-#header{
-    margin: 5vw auto;
+.pad-right{
+  padding-right: 20px;
 }
 
-#large{
+.pad-left{
+  padding-left: 20px;
+}
+
+.pad-top{
+  padding-top: 20px;
+}
+
+.pad-bottom{
+  padding-bottom: 20px;
+}
+
+.pad10{
+  padding: 10px;
+}
+
+.pad20{
+  padding: 20px;
+}
+
+#large-screen{
     display: none;
 }
 
+#projects-sm, #projects-lg, #startup-sm, #startup-lg, #contact-sm, #contact-lg{
+    display: none;
+}
 
 @media screen and (min-width: 400px){
     body{
         font-size: 18px;
     }
+
+    .narrow-content{
+        max-width: 370px;
+    }
 }
 
-@media screen and (min-width: 700px){
+@media screen and (min-width: 550px){
     body{
         font-size: 20px;
     }
+}
 
-    #header{
+@media screen and (min-width: 700px){
+    .header{
         margin: 35px auto;
     }
 
-    .title{
-        margin: 35px auto 35px auto;
+    .content{
+        max-width: 600px;
     }
 
-    .column {
-    	display: inline-block;
-        margin: auto 20px;
+    .wide-content{
+        max-width: 640px;
     }
 
-    #large{
+    .small{
+        width: 150px;
+    }
+
+    .medium{
+        width: 200px;
+    }
+
+    .large{
+        width: 250px;
+    }
+
+    #large-screen{
         display: block;
     }
 
-    #small{
+    #small-screen{
         display: none;
+    }
+}
+
+@media screen and (min-width: 950px){
+    .wide-content{
+        max-width: 885px;
     }
 }

@@ -4,33 +4,102 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>Daniel C. Narey</title>
-      <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,400italic|Vollkorn:400italic,400' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Josefin+Slab:300,400,600,700,400italic|Source+Sans+Pro:300,300italic,400' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
       <link rel="stylesheet" type="text/css" href="css/small.css">
   </head>
 
   <body>
-      <div class="w33" id="header">
-          <img class="photo" src="images/me.png">
+      <div class="header w33">
+          <a href=""><img class="small align-center" src="images/me.png"></a>
       </div>
-      <div class="title" id="large"><h1>Daniel C. Narey</h1></div>
-      <div class="title" id="small"><h1>Daniel C.<br>Narey</h1></div>
-      <div class="content" id="large">
-          <div class="menu column w50">
-              <a href="http://visotype.com" class="button">Startup</a>
-              <a href="" class="button">Blog</a>
+
+      <div id="large-screen">
+            <div class="header align-center"><a href=""><h1>Daniel C. Narey</h1></a></div>
+            <div class="content align-center menu" id="main-menu-lg">
+                <div class="centered-column align-center w50">
+                    <p class="button large" onclick="nextScreen('main-menu-lg','startup-lg')">Startup</p>
+                    <a href="http://danielnarey.com/blog/" class="button large">Blog</a>
+                </div>
+                <div class="centered-column align-center w50">
+                    <p class="button large" onclick="nextScreen('main-menu-lg','projects-lg')">Projects</p>
+                    <p class="button large" onclick="nextScreen('main-menu-lg','contact-lg')">Contact</p>
+                </div>
+            </div>
+            <div class="wide-content align-center menu" id="startup-lg">
+                <div class="left-column align-right v-top w25">
+                    <a href="http://visotype.com"><img class="medium" src="images/logo.png"></a>
+                </div>
+                <div class="right-column align-left v-top w75">
+                    <p class="sans strong p80 justified"><a class="highlight" href="http://visotype.com">Visotype LLC</a> aspires to make the tools and insights of data science more accessible to small organizations by providing data processing, analysis, and visualization services through a simple and user-friendly web interface. With up-front pricing, fast service, and satisfaction guaranteed, we can help you turn numbers into knowledge.</p>
+                </div>
+            </div>
+            <div class="content align-center menu" id="projects-lg">
+                <div class="left-column align-right v-center w33">
+                    <a href="http://makedataart.org"><img class="medium highlight" src="images/dataartlogo.png"></a>
+                </div>
+                <div class="right-column align-left v-center w66">
+                    <p class="sans">An interactive exhibit encouraging visitors to think about data in new ways as they create data-inspired art</p>
+                </div>
+            </div>
+            <div class="narrow-content align-center pad-top" id="contact-lg">
+                <ul class="fa-ul" style="margin:0px">
+                    <li><span style="font-size:1.4em"<i class="fa fa-envelope"></i>&nbsp</span>
+                        <span style="unicode-bidi:bidi-override; direction:rtl;">
+                            moc.epytosiv&#64leinad</span>
+                    </li>
+                    <li><span style="color:#00c4ff; font-size:1.6em"<i class="fa fa-twitter"></i></span>
+                        <span style="unicode-bidi:bidi-override; direction:rtl">
+                            yeranleinad&#64</span>
+                    </li>
+                </ul>
+            </div>
+      </div>
+
+      <div id="small-screen">
+          <div class="header align-center"><a href=""><h1>Daniel C.<br>Narey</h1></a></div>
+          <div id="main-menu-sm">
+              <div class="align-center">
+                  <p class="button large" onclick="nextScreen('main-menu-sm','startup-sm')">Startup</p>
+                  <p class="button large" onclick="nextScreen('main-menu-sm','projects-sm')">Projects</p>
+                  <a href="http://danielnarey.com/blog/" class="button large">Blog</a>
+                  <p class="button large" onclick="nextScreen('main-menu-sm','contact-sm')">Contact</p>
+              </div>
           </div>
-          <div class="menu column w50">
-              <a href="" class="button">Projects</a>
-              <a href="" class="button">Contact</a>
+          <div class="content align-center pad10" id="startup-sm">
+              <a href="http://visotype.com"><img class="medium align-center pad-left pad-top pad-bottom" src="images/logo.png"></a>
+              <p class="sans"><a class="highlight" href="http://visotype.com">Visotype LLC</a> aspires<br>to make the tools and<br>insights of data science<br>more accessible to small<br>organizations by providing<br>data processing, analysis,<br>and visualization services<br>through a simple and user-<br>friendly web interface.</p>
+              <p class="sans">With up-front pricing, fast<br>service, and satisfaction<br>guaranteed, we can help<br>you turn numbers into<br>knowledge.</p>
+
+          </div>
+          <div class="narrow-content align-center menu" id="projects-sm">
+              <div class="left-column align-right v-center w33 pad10">
+                  <a href="http://makedataart.org"><img class="small highlight" src="images/dataartlogo.png"></a>
+              </div>
+              <div class="right-column align-left v-center w66">
+                  <p class="sans p75">An interactive exhibit<br>encouraging visitors to<br>think about data in new<br>ways as they create<br>data-inspired art</p>
+              </div>
+          </div>
+          <div class="narrow-content align-center pad-top" id="contact-sm">
+              <ul class="fa-ul" style="margin:0px">
+                  <li><span style="font-size:1.4em"<i class="fa fa-envelope"></i>&nbsp</span>
+                      <span style="unicode-bidi:bidi-override; direction:rtl;">
+                          moc.epytosiv&#64leinad</span>
+                  </li>
+                  <li><span style="color:#00c4ff; font-size:1.6em"<i class="fa fa-twitter"></i></span>
+                      <span style="unicode-bidi:bidi-override; direction:rtl">
+                          yeranleinad&#64</span>
+                  </li>
+              </ul>
           </div>
       </div>
-      <div class="menu" id="small">
-          <a href="http://visotype.com" class="button">Startup</a>
-          <a href="" class="button">Projects</a>
-          <a href="" class="button">Blog</a>
-          <a href="" class="button">Contact</a>
-      </div>
+
+      <script>
+        function nextScreen(current, next) {
+            document.getElementById(current).style.display = "none";
+            document.getElementById(next).style.display = "block";
+        }
+      </script>
 
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

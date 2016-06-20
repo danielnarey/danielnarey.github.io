@@ -273,7 +273,7 @@ img.highlight:hover{
     }
 
     .wide-content{
-        max-width: 640px;
+        max-width: 720px;
     }
 
     .small{
@@ -297,8 +297,8 @@ img.highlight:hover{
     }
 }
 
-@media screen and (min-width: 950px){
+/*@media screen and (min-width: 950px){
     .wide-content{
-        max-width: 885px;
+        max-width: 720px;
     }
-}
+}*/

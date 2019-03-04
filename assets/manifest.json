@@ -1,8 +1,0 @@
-{
-  "app.css": "assets/app.bbac.css",
-  "app.js": "assets/app.js",
-  "manifest.js": "assets/manifest.js",
-  "../index.html": "assets/../index.html",
-  "fonts/index.css": "assets/fonts/ubuntu-latin-700italic.c02f.woff2",
-  "images/daniel-narey.jpg": "assets/images/daniel-narey.ebca.jpg"
-}
